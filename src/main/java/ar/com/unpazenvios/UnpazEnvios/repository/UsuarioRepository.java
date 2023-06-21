@@ -1,11 +1,17 @@
 package ar.com.unpazenvios.UnpazEnvios.repository;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import ar.com.unpazenvios.UnpazEnvios.model.Usuario;
 
 @Repository
-public interface UsuarioRepository {
+@Transactional
+public class UsuarioRepository{
 
-	public Usuario save(Usuario usuario);
+	
+	public static Usuario save(Usuario usuario) {
+		return usuario;
+	}
+
 }

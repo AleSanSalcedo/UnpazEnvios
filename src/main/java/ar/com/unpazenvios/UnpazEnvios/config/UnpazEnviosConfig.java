@@ -22,8 +22,8 @@ public class UnpazEnviosConfig {
 	      this.appApiVersion = appApiVersion;
 	    }
 
-    @Bean
-    public OpenAPI customOpenAPI() {
+	 	@Bean
+	 	public OpenAPI customOpenAPI() {
 	        return new OpenAPI()
 //	                .addSecurityItem(new SecurityRequirement().addList("Authorization"))
 //	                .components(new Components()

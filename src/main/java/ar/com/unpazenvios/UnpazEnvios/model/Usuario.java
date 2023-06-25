@@ -1,10 +1,13 @@
 package ar.com.unpazenvios.UnpazEnvios.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -19,7 +22,8 @@ public class Usuario {
 	private long id;
 	@Column(name="NOMBRE")
 	private String nombre;
-	@Column(name="RAZON-SOCIAL")
+	@JoinColumn(name="RAZON-SOCIAL")
+	@OneToOne(mappedBy = "usuario" ,cascade = CascadeType.ALL)
 	private RazonSocial razonSocial;
 	@Column(name="QUIT")
 	private String quit;
